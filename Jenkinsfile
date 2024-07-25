@@ -12,7 +12,7 @@ pipeline {
             steps {
                 script {
                     echo "Building feature branch: ${env.BRANCH_NAME}"
-                    sh 'javac Smaple.java'
+                    sh 'javac Sample.java'
                     sh 'java Sample'
                 }
             }
@@ -22,7 +22,7 @@ pipeline {
             steps {
                 script {
                     echo "Running Deployment on feature branch: ${env.BRANCH_NAME}"
-                    sh 'javac Smaple.java'
+                    sh 'javac Sample.java'
                     sh 'java Sample'
                 }
             }
