@@ -12,18 +12,18 @@ pipeline {
             steps {
                 script {
                     echo "Building feature branch: ${env.BRANCH_NAME}"
-                    sh javac Smaple.javac
-                    sh java Sample
+                    sh 'javac Sample.java'
+                    sh 'java Sample'
                 }
             }
         }
 
-        stage('deployment') {
+        stage('Deploy') {
             steps {
                 script {
                     echo "Running Deployment on feature branch: ${env.BRANCH_NAME}"
-                    sh javac Smaple.javac
-                    sh java Sample
+                    sh 'javac Sample.java'
+                    sh 'java Sample'
                 }
             }
         }
