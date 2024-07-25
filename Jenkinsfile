@@ -12,8 +12,8 @@ pipeline {
             steps {
                 script {
                     echo "Building feature branch: ${env.BRANCH_NAME}"
-                    sh javac Smaple.javac
-                    sh java Sample
+                    sh 'javac Smaple.javac'
+                    sh 'java Sample'
                 }
             }
         }
@@ -22,8 +22,8 @@ pipeline {
             steps {
                 script {
                     echo "Running Deployment on feature branch: ${env.BRANCH_NAME}"
-                    sh javac Smaple.javac
-                    sh java Sample
+                    sh 'javac Smaple.javac'
+                    sh 'java Sample'
                 }
             }
         }
